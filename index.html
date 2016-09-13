@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>vue-starter</title>
+    <style>
+    	.view {
+		  transition: all .5s ease;
+		}
+		.test-enter, .test-leave {
+		  opacity: 0;
+		  transform: translate3d(20px, 0, 0);
+		}
+		[v-cloak] {
+		  display: none;
+		}
+		.fade-enter-active, .fade-leave-active {
+			transition: all .5s ease;
+		}
+		.fade-enter, .fade-leave-active {
+			transform: translateX(20%);
+			opacity: 0;
+		}
+    </style>
+  </head>
+  <body>
+    <div id="app">
+    	<div>
+    		<p>{{$route.path}}</p>
+			<ul>
+				<li>
+					<router-link to="/">HOME</router-link>
+				</li>
+				<li>
+					<router-link to="/post">POST</router-link>
+				</li>
+				<li>
+					<router-link to="/post/1">POST 1</router-link>
+				</li>
+				<li>
+					<router-link to="/api">API</router-link>
+				</li>
+			</ul>
+			<transition name="fade" mode="out-in">
+				<router-view></router-view>
+			</transition>
+		</div>
+    </div>
+    <script src="/dist/build.js"></script>
+  </body>
+</html>
