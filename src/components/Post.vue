@@ -15,6 +15,7 @@
       <div v-if="post" class="content" :key="post.id">
         <h2>{{ post.title }}</h2>
         <p>{{ post.body }}</p>
+        <p>{{ post.id }}</p>
       </div>
     </transition>
   </div>
