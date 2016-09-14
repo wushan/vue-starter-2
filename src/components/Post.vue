@@ -1,24 +1,16 @@
-<template>
-  <div class="post">
-    <div class="loading" v-if="loading">Loading...</div>
-    <div v-if="error" class="error">
-      {{ error }}
-    </div>
-    <p>參數：{{ $route.params.id }}</p>
-    <h2> 內部連結 </h2>
-    <page-navigation></page-navigation>
-    <transition name="slide">
-      <!--
-        giving the post container a unique key triggers transitions
-        when the post id changes.
-      -->
-      <div v-if="post" class="content" :key="post.id">
-        <h2>{{ post.title }}</h2>
-        <p>{{ post.body }}</p>
-        <p>{{ post.id }}</p>
-      </div>
-    </transition>
-  </div>
+<template lang="pug">
+  .post
+    .loading(v-if="loading") Loading...
+    .error(v-if="error") {{error}}
+    p Params: {{$route.params.id}}
+    h2 內部連結
+    page-navigation
+    transition(name="slide")
+      .content(v-if="post", :key="post.id")
+        h2 Title: {{post.title}}
+        p Body: {{post.body}}
+        p ID: {{post.id}}
+  
 </template>
 
 <script>
