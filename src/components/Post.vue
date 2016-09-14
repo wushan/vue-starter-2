@@ -1,22 +1,40 @@
 <template>
 	<div id="post">
 		<h1>{{ msg }} !!!</h1>
-		<p>參數：{{params}}</p>
+		<p>{{ $route.params.id }}</p>
 	</div>
 </template>
 
 <script>
+import { getPost } from '../api'
 export default {
   data () {
     return {
-      msg: 'Hola !',
-      params: 'xx'
+      loading: false,
+      post: null,
+      error: null,
+      msg: 'xxxx'
     }
   },
-  route: {
-  	activate: function(){
-  		console.log('rendered');
-  	}
+  created () {
+    this.fetchData()
+  },
+  watch: {
+    '$route': 'fetchData'
+  },
+  methods: {
+    fetchData () {
+      this.error = this.post = null
+      this.loading = true
+      getPost(this.$parent.$route.params.id, (err, post) => {
+        this.loading = false
+        if (err) {
+          this.error = err.toString()
+        } else {
+          this.post = post
+        }
+      })
+    }
   }
 }
 </script>

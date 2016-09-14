@@ -26,19 +26,26 @@
   <body>
     <div id="app">
     	<div>
+    		<p>{{$route.params}}</p>
     		<p>{{$route.path}}</p>
 			<ul>
 				<li>
 					<router-link to="/">HOME</router-link>
 				</li>
 				<li>
-					<router-link to="/post">POST</router-link>
-				</li>
-				<li>
 					<router-link to="/post/1">POST 1</router-link>
 				</li>
 				<li>
+					<router-link to="/post/2">POST 2</router-link>
+				</li>
+				<li>
 					<router-link to="/api">API</router-link>
+				</li>
+				<li>
+					<router-link to="/with-params/1">/with-params/1</router-link>
+				</li>
+				<li>
+					<router-link to="/with-params/2">/with-params/2</router-link>
 				</li>
 			</ul>
 			<transition name="fade" mode="out-in">
