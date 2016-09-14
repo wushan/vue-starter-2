@@ -11,13 +11,15 @@ const posts = {
   }
 }
 
-export function getPost (id, cb) {
-  // fake an API request
-  setTimeout(() => {
-    if (posts[id]) {
-      cb(null, posts[id])
-    } else {
-      cb(new Error('Post not found.'))
-    }
-  }, 100)
+export default {
+	getPost (id, cb) {
+	  // fake an API request
+	  setTimeout(() => {
+	    if (posts[id]) {
+	      cb(null, posts[id])
+	    } else {
+	      cb(new Error('Post not found.'))
+	    }
+	  }, 100)
+	}
 }

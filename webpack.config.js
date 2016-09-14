@@ -31,6 +31,11 @@ module.exports = {
       }
     ]
   },
+  vue: {
+    loaders: {
+      'scss': 'vue-style!css!sass'
+    }
+  },
   resolve: {
       alias: {vue: 'vue/dist/vue'}
   },

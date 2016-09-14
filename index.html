@@ -30,22 +30,22 @@
     		<p>{{$route.path}}</p>
 			<ul>
 				<li>
-					<router-link to="/">HOME</router-link>
+					<router-link to="/" activeClass="active">HOME</router-link>
 				</li>
 				<li>
-					<router-link to="/post/1">POST 1</router-link>
+					<router-link to="/post/1" activeClass="active">POST 1</router-link>
 				</li>
 				<li>
-					<router-link to="/post/2">POST 2</router-link>
+					<router-link to="/post/2" activeClass="active">POST 2</router-link>
 				</li>
 				<li>
-					<router-link to="/api">API</router-link>
+					<router-link to="/api" activeClass="active">API</router-link>
 				</li>
 				<li>
-					<router-link to="/with-params/1">/with-params/1</router-link>
+					<router-link to="/with-params/1" activeClass="active">/with-params/1</router-link>
 				</li>
 				<li>
-					<router-link to="/with-params/2">/with-params/2</router-link>
+					<router-link to="/with-params/2" activeClass="active">/with-params/2</router-link>
 				</li>
 			</ul>
 			<transition name="fade" mode="out-in">

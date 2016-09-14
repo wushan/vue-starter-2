@@ -19,4 +19,7 @@ export default {
 body {
   font-family: Helvetica, sans-serif;
 }
+a.active {
+  color: red;
+}
 </style>
