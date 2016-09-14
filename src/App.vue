@@ -15,11 +15,6 @@ export default {
 }
 </script>
 
-<style>
-body {
-  font-family: Helvetica, sans-serif;
-}
-a.active {
-  color: red;
-}
+<style lang="scss">
+  @import "src/assets/styles/app.scss";
 </style>

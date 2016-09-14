@@ -3,25 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>vue-starter</title>
-    <style>
-    	.view {
-		  transition: all .5s ease;
-		}
-		.test-enter, .test-leave {
-		  opacity: 0;
-		  transform: translate3d(20px, 0, 0);
-		}
-		[v-cloak] {
-		  display: none;
-		}
-		.fade-enter-active, .fade-leave-active {
-			transition: all .5s ease;
-		}
-		.fade-enter, .fade-leave-active {
-			transform: translateX(20%);
-			opacity: 0;
-		}
-    </style>
   </head>
   <body>
     <div id="app">
@@ -37,15 +18,6 @@
 				</li>
 				<li>
 					<router-link to="/post/2" activeClass="active">POST 2</router-link>
-				</li>
-				<li>
-					<router-link to="/api" activeClass="active">API</router-link>
-				</li>
-				<li>
-					<router-link to="/with-params/1" activeClass="active">/with-params/1</router-link>
-				</li>
-				<li>
-					<router-link to="/with-params/2" activeClass="active">/with-params/2</router-link>
 				</li>
 			</ul>
 			<transition name="fade" mode="out-in">

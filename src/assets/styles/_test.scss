@@ -1,0 +1,17 @@
+.view {
+  transition: all .5s ease;
+}
+.test-enter, .test-leave {
+  opacity: 0;
+  transform: translate3d(20px, 0, 0);
+}
+[v-cloak] {
+  display: none;
+}
+.fade-enter-active, .fade-leave-active {
+	transition: all .5s ease;
+}
+.fade-enter, .fade-leave-active {
+	transform: translateX(20%);
+	opacity: 0;
+}
